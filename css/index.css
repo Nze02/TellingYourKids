@@ -1,8 +1,11 @@
 html, body, nav, section, div{
     font-family: Nunito;
 }
+.docs{
+    color: hsl(0, 3%, 6%);
+}
 .nav-icon{
-    top: 50px;
+
 left: 140px;
 width: 264px;
 height: 45px;
