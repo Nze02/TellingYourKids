@@ -24,13 +24,22 @@ font-weight: bolder;
 .message-body{
     font-weight: bolder;
 }
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    z-index: 2;
+}
 .btn{
     width: 180px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: Nunito;
     font-size: larger;
     height: 50px;
     border: none;
+    outline: none;
 }
 .btn-link{
     border-radius: 50%;
@@ -97,6 +106,6 @@ font-weight: bolder;
         width: 40vw;
     }
     .btn-add{
-        width: 70vw;
+        width: 72vw;
     }
 }
