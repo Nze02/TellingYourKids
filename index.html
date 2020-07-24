@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="css/index.css">
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
     <title>Telling Your Kids</title>
+    <script>
+    
+
+    </script>
 </head>
 <body>
     <header class="container">
-        <nav class="navbar">
+        <nav>
             <a class="navbar-brand nav-icon" href="index.html">TellingOurKids</a>           
           </nav>
 
         </header>
         <main class="container mt-5">
             <section id="message" >
-            <h2 class="message-body">
+            <h2 class="message-body" data-aos="fade-up">
                 I use to make excuses to dip out of plans and stay home.
                 Now I will do everything to see my friends and leave home.
 
@@ -33,21 +38,69 @@
             </section>
             <section class="controls mt-5">
                 <div class="control-btn">
-                    <button type="button" class="btn btn-dark m-1">Previous</button>
-                <button type="button" class="btn btn-dark m-1">Next</button>
+                    <button type="button" class="btn btn-dark m-1" data-aos="fade-left"> Previous</button>
+                <button type="button" class="btn btn-dark m-1" data-aos="fade-right">Next </button>
                 </div>
                 
                 <div class="add-details">
                     <button type="button" class="btn btn-link m-1" >?</button>
-                    <button type="button" class="btn btn-dark btn-add m-1">Add</button>
+                    <button type="button" class="btn btn-dark btn-add m-1" data-toggle="modal" data-target="#add">Add</button>
                 </div>
                 
             </section>
         </main>
-        <footer></footer>
+        <footer>
+          
+
+
+<div  class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+//     $('#exampleModal').on('show.bs.modal', function (event) {
+//   var button = $(event.relatedTarget) // Button that triggered the modal
+//   var recipient = button.data('whatever') // Extract info from data-* attributes
+//   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+//   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+//   var modal = $(this)
+//   modal.find('.modal-title').text('New message to ' + recipient)
+//   modal.find('.modal-body input').val(recipient)
+// })
+
+AOS.init({
+  duration: 1200,
+})
+</script>
 </body>
 </html>
