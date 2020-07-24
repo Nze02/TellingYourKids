@@ -1,0 +1,99 @@
+html, body, nav, section, div{
+    font-family: Nunito;
+}
+.nav-icon{
+    top: 50px;
+left: 140px;
+width: 264px;
+height: 45px;
+text-align: left;
+font: Bold 38px/46px Nunito;
+letter-spacing: 0px;
+color: #141212;
+opacity: 1;
+
+/* font-family: Muli; */
+}
+#message{
+min-height: 300px;
+font-weight: bolder;
+}
+.message-body{
+    font-weight: bolder;
+}
+.btn{
+    width: 180px;
+    border-radius: 10px;
+    font-family: Nunito;
+    font-size: larger;
+    height: 50px;
+    border: none;
+}
+.btn-link{
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 35px !important;
+    height: 35px !important;
+    font-size: larger;
+}
+.controls{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+@media screen and (max-width: 1199px) {
+    .controls{
+        grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .controls{
+        grid-template-columns: 3fr 2fr;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .controls{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .btn{
+        width: 100px;
+    }
+    
+    /* .add-details{
+        display: flex;
+        flex-direction: column-reverse;
+    } */
+
+    .btn-link{
+        
+        width: 30px !important;
+        height: 30px !important;
+        margin: 2px;
+    }
+    /* .btn{
+        width: 40vw;
+    }
+    .btn-link{
+        width: 30px !important;
+        height: 30px !important;
+        font-size: larger;
+    }
+    .add-details{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    } */
+  }
+  @media screen and (max-width: 470px) {
+    .controls{
+        grid-template-columns: 1fr;
+        
+    }
+    .btn{
+        width: 40vw;
+    }
+    .btn-add{
+        width: 70vw;
+    }
+}
