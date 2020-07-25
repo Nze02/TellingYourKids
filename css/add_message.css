@@ -9,6 +9,10 @@ input, textarea{
     width: 50vw;
     border-bottom: #e5e5e5 1px solid;
 }
+textarea{
+    font-size: larger;
+    font-family: Nunito;
+}
 input:focus{
     outline: none;
 }
