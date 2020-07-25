@@ -75,8 +75,12 @@ footer{
       width: 20px;
       height: 20px;
   }
+  .card{
+      margin-top: 10px;
+  }
   a{
       text-decoration: none !important;
+      color: black;
   }
   a:active{
       text-decoration: none !important;
