@@ -31,6 +31,8 @@ footer{
     text-align: center;
     background-color: white;
     z-index: 2;
+    background-color: #e5e5e5;
+    font-weight: bolder;
 }
 .btn{
     width: 180px;
