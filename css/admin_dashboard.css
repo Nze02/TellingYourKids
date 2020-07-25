@@ -62,9 +62,7 @@ footer{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-  td{
-      font-size: 12px;
-  }
+ 
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
@@ -83,6 +81,23 @@ footer{
   a:active{
       text-decoration: none !important;
   }
+
+  .card-header{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  .side-checkbox{
+    width: 20px;
+     height: 20px;
+     margin-right: 10px
+  }
+  .flow-child>.date{
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .flow-child>i{
+    margin-left: 20vw;
+  }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -93,6 +108,9 @@ footer{
       
         font-size: small;
 
+    }
+    .card-header{
+        font-size: small;
     }
     #selectall{
         width: 15px;
@@ -105,10 +123,13 @@ footer{
   }
 
   @media screen and (max-width:  1085px) {
-      #props{
+      #props, .flow{
           
           overflow: auto;
           white-space: nowrap;
+      }
+      .card-header{
+          width: 85vw;
       }
       #props>div{
           margin: 20px;
