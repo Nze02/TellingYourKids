@@ -6,6 +6,7 @@ label{
 }
 input{
     width: 50vw;
+    border-bottom: #e5e5e5 1px solid;
 }
 input:focus{
     outline: none;
