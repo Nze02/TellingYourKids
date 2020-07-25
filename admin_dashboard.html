@@ -86,11 +86,18 @@
 
     <!-- Card body -->
     <form id="3" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-     
-      </div>
-    </form>
+        <textarea class="card-body" readonly>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+       
+        </textarea>
+        <hr>
+        <div class="text-controls">
+            <h3>Edit</h3>
+            <h3>Done</h3>
+            <h3>Jane Doe</h3>
+            <h3>02/07/2020</h3>
+        </div>
+      </form>
 
   </div>
   <!-- Accordion card -->
@@ -117,11 +124,18 @@
 
     <!-- Card body -->
     <form id="2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-     
-      </div>
-    </form>
+        <textarea class="card-body" readonly>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+       
+        </textarea>
+        <hr>
+        <div class="text-controls">
+            <h3>Edit</h3>
+            <h3>Done</h3>
+            <h3>Jane Doe</h3>
+            <h3>02/07/2020</h3>
+        </div>
+      </form>
 
   </div>
   <!-- Accordion card -->
@@ -146,9 +160,16 @@
 
     <!-- Card body -->
     <form id="1" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-      <div class="card-body">
+      <textarea class="card-body" readonly>
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
      
+      </textarea>
+      <hr>
+      <div class="text-controls">
+          <h3>Edit</h3>
+          <h3>Done</h3>
+          <h3>Jane Doe</h3>
+          <h3>02/07/2020</h3>
       </div>
     </form>
 
@@ -176,32 +197,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script>
-    let openbtn = document.getElementById('open')
-    let sidebar = document.getElementById('sidebar')
-    let closebtn =document.getElementById('close')
-    closebtn.style.display="none"
-    openbtn.addEventListener('click', ((e)=>{
-        e.preventDefault()
-        setTimeout(()=>{
-            
-        sidebar.style.display="block"
-        openbtn.style.display="none"
-        closebtn.style.display="block";
-        }, 500)
-      
-        closebtn.addEventListener('click', ((e)=>{
-        setTimeout(()=>{
-           
-            e.preventDefault()
-        sidebar.style.display="none"
-        openbtn.style.display="block"
-        closebtn.style.display="none";
-       
-}, 500)
-}))
-      
-    }))
-</script>
+<!-- sideNav -->
+<script src="js/sidenav.js"></script>
+
 </body>
 </html>

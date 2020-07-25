@@ -98,6 +98,20 @@ footer{
   .flow-child>i{
     margin-left: 20vw;
   }
+  .card-body{
+      width: 90vw;
+      border: none;
+  }
+  .card-body:focus{
+      border: none;
+      outline: none;
+      
+  }
+  .text-controls{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 3px;
+  }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -107,7 +121,11 @@ footer{
     #props{
       
         font-size: small;
-
+        
+    }
+    .text-controls>h3{
+        font-size: small;
+        margin: 2px;
     }
     .card-header{
         font-size: small;
