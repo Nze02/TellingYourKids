@@ -1,0 +1,37 @@
+html, body, nav, section, div{
+    font-family: Nunito;
+}
+label{
+    width: 20vw;
+}
+input{
+    width: 50vw;
+}
+input:focus{
+    outline: none;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    z-index: 2;
+    border-top: 1px solid #e5e5e5;
+    font-weight: bolder;
+}
+nav{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.btn{
+    width: 180px;
+    border-radius: 5px;
+    font-family: Nunito;
+    font-size: larger;
+    height: 50px;
+    border: none;
+    outline: none;
+}
