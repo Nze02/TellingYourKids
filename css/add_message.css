@@ -4,11 +4,14 @@ html, body, nav, section, div{
 label{
     width: 20vw;
 }
-input{
+input, textarea{
     width: 50vw;
     border-bottom: #e5e5e5 1px solid;
 }
 input:focus{
+    outline: none;
+}
+textarea:focus{
     outline: none;
 }
 
