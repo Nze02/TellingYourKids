@@ -32,7 +32,7 @@
             <div>
                 <label class="m-2 h2" for="story">Story</label>
                 
-                <textarea onload="this.focus()" class=" h3 m-2 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1">
+                <textarea class=" h3 m-2 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1">
                    
                 </textarea>
             </div>
@@ -98,6 +98,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
     <script src="js/typed.js"></script>
+    <script>
+        window.addEventListener('load', (()=>{
+            document.getElementById('story').focus()
+        }))
+    </script>
 </body>
 
 </html>
