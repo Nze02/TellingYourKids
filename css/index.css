@@ -41,6 +41,14 @@ footer{
     border: none;
     outline: none;
 }
+button:active{
+    outline: none !important;
+    border: none !important;
+}
+button{
+    outline: none !important;
+    border: none !important;
+}
 .btn-link{
     border-radius: 50%;
     border: 1px solid black;
@@ -48,6 +56,7 @@ footer{
     height: 35px !important;
     font-size: larger;
     font-weight: bolder;
+    background-color: #e5e5e5;
 }
 .controls{
     display: grid;
