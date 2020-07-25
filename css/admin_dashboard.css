@@ -60,7 +60,10 @@ footer{
   }
   #props{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  td{
+      font-size: 12px;
   }
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
