@@ -58,7 +58,10 @@ footer{
   .sidenav a:hover {
     color: #f1f1f1;
   }
-  
+  #props{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
@@ -67,10 +70,42 @@ footer{
   #open{
       display: none;
   }
+  #selectall{
+      width: 30px;
+      height: 30px;
+  }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+ 
+  @media screen and (max-width:  1085px) {
+    #props{
+      
+        font-size: small;
+
+    }
+    #selectall{
+        width: 15px;
+        height: 15px;
+    }
+    #approve{
+        width: 15px;
+        height: 15px; 
+    }
+  }
+
+  @media screen and (max-width:  1085px) {
+      #props{
+          
+          overflow: auto;
+          white-space: nowrap;
+      }
+      #props>div{
+          margin: 20px;
+      }
+  }
+
   @media screen and (max-width: 400px) {
     .sidenav {display: none;}
     .main{

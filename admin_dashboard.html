@@ -36,8 +36,31 @@
           </nav>
 <hr>
         </header>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quia maxime nihil ipsa voluptatibus?
+<div id="props">
+    <div>
+        <label for="selectall">Select All</label>
+        <input type="checkbox" name="" id="selectall">
+    </div>
+    <div>
+        <label for="moveup">Move up</label>
+        <i class="fa fa-angle-up" id="moveup"></i>
+    </div>
+    <div>
+        <label for="movedown">Move down</label>
+        <i class="fa fa-angle-down" id="movedown"></i>
+    </div>
+    <div>
+        <label for="approve">Approve</label>
+        <img src="images//approved.svg" id="approve" alt="">
+    </div>
+   
 
+    <div>
+        <label for="delete">delete</label>
+        <i class="fa fa-trash" id="delete"></i>
+    </div>
+   
+</div>
 
 </main>
        
@@ -55,17 +78,24 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quia maxime nihil
     closebtn.style.display="none"
     openbtn.addEventListener('click', ((e)=>{
         e.preventDefault()
+        setTimeout(()=>{
+            
         sidebar.style.display="block"
         openbtn.style.display="none"
         closebtn.style.display="block";
-
-
+        }, 500)
+      
         closebtn.addEventListener('click', ((e)=>{
+        setTimeout(()=>{
+           
             e.preventDefault()
         sidebar.style.display="none"
         openbtn.style.display="block"
         closebtn.style.display="none";
-        }))
+       
+}, 500)
+}))
+      
     }))
 </script>
 </body>
