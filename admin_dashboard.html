@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css//bootstrap.css">
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <title>Telling Your Kids</title>
+</head>
+<body>
+    
+
+
+        <div class="sidenav" id="sidebar">
+            <a href="#about" class="active">Storyline</a>
+            <a href="#services">New Entry</a>
+            <a class="logout" href="logout.html">Logout</a>
+           
+          </div>
+        
+<main class="main">
+    <header>
+        <nav style="display: flex;">
+            <a class="navbar-brand nav-icon" href="index.html">TellingOurKids</a>  
+            <a href="" class="mt-2">
+                <i id="open" class="fa fa-bars"></i>
+                
+            </a> 
+            <a id="close" > <h2 style="font-weight: bolder;" class="mt-2">&#10005</h2></a>        
+          </nav>
+<hr>
+        </header>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste quia maxime nihil ipsa voluptatibus?
+
+
+</main>
+       
+         <!-- footer -->
+         <footer class="footer">
+
+            &copy; TellingOurKids 2020.
+  
+  
+          </footer>
+<script>
+    let openbtn = document.getElementById('open')
+    let sidebar = document.getElementById('sidebar')
+    let closebtn =document.getElementById('close')
+    closebtn.style.display="none"
+    openbtn.addEventListener('click', ((e)=>{
+        e.preventDefault()
+        sidebar.style.display="block"
+        openbtn.style.display="none"
+        closebtn.style.display="block";
+
+
+        closebtn.addEventListener('click', ((e)=>{
+            e.preventDefault()
+        sidebar.style.display="none"
+        openbtn.style.display="block"
+        closebtn.style.display="none";
+        }))
+    }))
+</script>
+</body>
+</html>

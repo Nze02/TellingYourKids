@@ -3,6 +3,7 @@ html, body, nav, section, div{
 }
 label{
     width: 20vw;
+    font-weight: bolder;
 }
 input, textarea{
     width: 50vw;
