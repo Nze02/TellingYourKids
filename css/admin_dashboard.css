@@ -127,6 +127,9 @@ footer{
         font-size: small;
         
     }
+    .card-body{
+        font-size: small;
+    }
     .text-controls>h3{
         font-size: small;
         margin: 2px;
