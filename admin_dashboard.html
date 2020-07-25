@@ -209,14 +209,20 @@
         window.addEventListener('load',(()=>{
         console.log(edit[i])
         edit[i].addEventListener('click', ((e)=>{
+            e.target.style.background="#e5e5e5"
+           
             let done =e.target.nextElementSibling
+            done.style.background="#fff"
            
            let textarea=e.target.parentElement.previousElementSibling.previousElementSibling
            textarea.readOnly=false
+           textarea.focus()
         //    alert(textarea.innerHTML)
        done.addEventListener('click', (()=>{
            textarea.readOnly=true;
-           textarea.focus()
+           e.target.style.background="#fff"
+           done.style.background="#e5e5e5"
+          
            setTimeout(()=>{
                msg.style.display="block"
            },500)
