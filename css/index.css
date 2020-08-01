@@ -101,6 +101,14 @@ button{
         height:auto !important;
   
         }
+        .docs{
+        
+            bottom: 0;
+           
+            
+            
+        }
+        
   }
   @media screen and (max-width: 767px) {
     .controls{
