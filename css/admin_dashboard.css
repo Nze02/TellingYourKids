@@ -197,6 +197,9 @@ footer{
     a>.flow-child, a>.flow-child>span, .date{
         font-size: 10px !important;
       }
+      .flow-child>i{
+          margin-left: 2px;
+      }
     #open{
         display: block;
     }
