@@ -1,4 +1,4 @@
-html, body, nav, section, div{
+html, body, nav, section, div, header{
     font-family: Helvetica;
 }
 
@@ -17,10 +17,11 @@ left: 140px;
 width: 264px;
 height: 45px;
 text-align: left;
-font: Bold 38px/46px Nunito;
+font: Bold 38px/46px Helvetica;
 letter-spacing: 0px;
-color: #141212;
+color:  #C72481;
 opacity: 1;
+
 
 /* font-family: Muli; */
 }
@@ -64,6 +65,7 @@ footer{
     opacity: 1;
     overflow-x: hidden;
     padding-top: 20px;
+    z-index: 999999;
   }
   
   .sidenav a {
