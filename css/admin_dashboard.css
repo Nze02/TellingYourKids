@@ -1,9 +1,15 @@
 html, body, nav, section, div{
-    font-family: Nunito;
+    font-family: Helvetica;
 }
 
 .active{
     color: #fff !important;
+}
+.text-controls>h3{
+    font-size: 20px;
+}
+.card{
+    border: none !important;
 }
 .nav-icon{
 
@@ -17,6 +23,18 @@ color: #141212;
 opacity: 1;
 
 /* font-family: Muli; */
+}
+.card, .card-header, .card-body, .collapse{
+    background-color: #e5e5e5;
+}
+#props>div{
+    cursor: pointer;
+}
+.card-body{
+    font-size: large;
+}
+.h1{
+    font-size: 20px;
 }
 footer{
     position: fixed;
@@ -42,7 +60,8 @@ footer{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background: #C72481 0% 0% no-repeat padding-box;
+    opacity: 1;
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -61,6 +80,8 @@ footer{
   #props{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      width: 100% !important;
+   
   }
  
   .main {
@@ -116,6 +137,8 @@ footer{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 3px;
+      justify-items: center;
+      cursor: pointer;
   }
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

@@ -49,8 +49,13 @@ let move = document.getElementById('move')
 let count = 0
 move.style.zIndex = 10000000
 function moveup() {
-    count -= 20
+    count -= 60
     move.style.transform = `translateY(${count}px)`
     console.log(count)
 }
 
+
+function movedown(){
+    count+=60
+    move.style.transform = `translateY(${count}px)`
+}
