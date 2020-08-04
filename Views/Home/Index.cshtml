@@ -1,29 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" id="html">
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css//bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/loader.css">
-    <title>Telling Your Kids</title>
-
-</head>
-
-<body id="body">
-    <header>
-        <nav class="container">
-            <a class="navbar-brand nav-icon" href="index.html">TellingOurKids</a>
-        </nav>
-        <hr>
-    </header>
-
+<!--<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p id="home">Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>-->
+ <link rel="stylesheet" href="~/css/index.css">
+ 
     <main id="main" class="container mt-5">
         <section class="siema">
 
@@ -82,7 +66,7 @@
 
             <div class="add-details">
                 <button type="button" class="btn btn-link m-1" data-toggle="modal" data-target="#details">?</button>
-                <a href="add_message.html"><button type="button" class="btn btn-dark btn-add m-1" data-toggle="modal"
+                <a asp-area="" asp-controller="Home" asp-action="add_story"><button type="button" class="btn btn-dark btn-add m-1" data-toggle="modal"
                         data-target="#ad">Add</button></a>
             </div>
 
@@ -131,29 +115,14 @@
 
 
 
-        <!-- loader -->
-        <div class="se-pre-con"></div>
-        <!-- Ends -->
+         <!-- loader -->
+   <div class="se-pre-con"></div>
+        <!-- Ends --> 
     </section>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://pawelgrzybek.com/siema/assets/siema.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-    <script class="jquerry for loader" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/siema.js"></script>
-    <script src="js/loader.js"></script>
-    <script>
-
-
-    </script>
-</body>
-
-</html>
+  
+    <script src="~/lib/siama/siama.js" asp-append-version="true"></script>
+    <script src="~/js/siema.js" asp-append-version="true"></script>
+  
+<script>
+     document.getElementById("nav1").style.display="none"
+</script>

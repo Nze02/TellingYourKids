@@ -1,0 +1,77 @@
+html, body, nav, section, div{
+    font-family: Helvetica !important;
+    background: #C72481 0% 0% no-repeat padding-box;
+opacity: 1;
+color: #fff;
+}
+
+label{
+    width: 10%;
+    font-weight: bolder;
+}
+input, textarea, .form-control{
+    width: 80%;
+    border-bottom: #fff 1px solid;
+    background: #C72481 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #fff;
+}
+textarea{
+    font-size: larger;
+    font-family: Nunito;
+}
+input:focus{
+    outline: none;
+}
+.form-control:focus{
+    outline: none;
+    background: #C72481 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #fff;
+    border: none;
+}
+textarea:focus{
+    outline: none;
+}
+
+/* footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    z-index: 2;
+    border-top: 1px solid #e5e5e5;
+    font-weight: bolder;
+} */
+nav{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.btn{
+    width: 180px;
+    border-radius: 5px;
+    font-family: Nunito;
+    font-size: larger;
+    height: 50px;
+    border: none;
+    outline: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    input, textarea, label{
+      font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 505px) {
+    input, textarea, label{
+      font-size: 14px !important;
+  }
+  .h6{
+      font-size: 10px !important;
+  }
+ 
+    }
+    
