@@ -35,7 +35,18 @@ namespace TellingYourKids.Controllers
         {
             return View();
         }
-
+           public IActionResult login()
+        {
+            return View();
+        }
+             public IActionResult admin_dashboard_newentry()
+        {
+            return View();
+        }
+    public IActionResult admin_signup()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

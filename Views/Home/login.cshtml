@@ -1,0 +1,66 @@
+
+    <link rel="stylesheet" href="~/css/add_message.css">
+  
+
+
+    <header class="container mt-3">
+        <nav>
+            <div></div>
+            <a href="index.html">
+                <h1>&#10005</h1>
+            </a>
+        </nav>
+    </header>
+    <main class="container">
+        <form action="#" method="POST">
+            
+            <div>
+                <label class="m-2 h2" for="username">Username</label>
+                
+                <input type="text" id="username" class=" h3 m-2 border-right-0 border-top-0 border-left-0"  required  tabindex="1">
+               
+            </div>
+
+            <br>
+            <div>
+                <label class="m-2  h2 " for="password">Password
+                    
+                </label>
+                <input required class="h2 m-2 border-right-0 border-top-0 border-left-0" id="password" type="password" class="text">
+
+            </div>
+            <br>
+            <br>
+
+            <button type="submit" class="btn btn-dark btn-add m-1">Login</button>
+
+
+        </form>
+
+
+
+    </main>
+
+
+    <!-- footer -->
+    @* <footer class="footer">
+
+        &copy; TellingOurKids 2020.
+
+
+    </footer> *@
+    <!-- loader -->
+    <div class="se-pre-con"></div>
+    <!-- Ends -->
+ 
+   
+
+    <script>
+        window.addEventListener('load', (()=>{
+            document.getElementById('story').focus()
+        }))
+
+        document.getElementById("nav").style.display="none"
+        document.getElementById("nav1").style.display="none"
+         document.getElementById("footer").style.display="none"
+    </script>

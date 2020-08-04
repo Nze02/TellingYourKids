@@ -35,3 +35,6 @@ C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Te
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\TellingYourKids.csproj.CopyComplete
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\add_story.cshtml.g.cs
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\admin_dashboard.cshtml.g.cs
+C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\admin_dashboard_newentry.cshtml.g.cs
+C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\login.cshtml.g.cs
+C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\admin_signup.cshtml.g.cs

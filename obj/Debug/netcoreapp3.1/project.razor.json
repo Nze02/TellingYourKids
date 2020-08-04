@@ -20521,8 +20521,23 @@
   "RootNamespace": "TellingYourKids",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\ENGR UCHE\\Documents\\projects\\TellingYourKids\\Views\\Home\\admin_dashboard_newentry.cshtml",
+      "TargetPath": "Views\\Home\\admin_dashboard_newentry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ENGR UCHE\\Documents\\projects\\TellingYourKids\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ENGR UCHE\\Documents\\projects\\TellingYourKids\\Views\\Home\\admin_signup.cshtml",
+      "TargetPath": "Views\\Home\\admin_signup.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ENGR UCHE\\Documents\\projects\\TellingYourKids\\Views\\Home\\login.cshtml",
+      "TargetPath": "Views\\Home\\login.cshtml",
       "FileKind": "mvc"
     },
     {
