@@ -6,14 +6,14 @@
      <div class="sidenav" id="sidebar">
             <a class="active" asp-area="" asp-controller="Home" asp-action="admin_dashboard">Storyline</a>
             <a  asp-area="" asp-controller="Home" asp-action="admin_dashboard_newentry">New Entry</a>
-            <a class="logout" href="login.html">Logout</a>
+            <a class="logout" asp-area="" asp-controller="Home" asp-action="index"> Logout</a>
            
           </div>
 
     <main class="main">
         <header class="card" style="background-color: #fff; z-index: 9999; margin-top: 0;"> 
            <nav style="display: flex;">
-                <a class="navbar-brand nav-icon" href="index.html">TellingOurKids</a>
+                <a asp-area="" asp-controller="Home" asp-action="index"> </a>
                 <a href="" class="mt-2">
                     <i id="open" class="fa fa-bars"></i>
 
@@ -27,10 +27,10 @@
         <h2 id="msg" class="alert alert-success" style=" display: none; width: 40%;">SAVED
         </h2>
         <div id="props" class="container-fluid card" style=" z-index: 999; background-color: white; margin-top: 0px;">
-            <div>
+            @* <div>
                 <label for="selectall">Select All</label>
                 <input type="checkbox" onclick="toggle(this)" name="" id="selectall">
-            </div>
+            </div> *@
             <div onclick="moveup()">
                 <label for="moveup">Move up</label>
                 <i class="fa fa-angle-up" id="moveup"></i>
@@ -45,10 +45,10 @@
     </div> -->
 
 
-            <div>
+            @* <div>
                 <label for="delete">delete</label>
                 <i class="fa fa-trash" id="delete"></i>
-            </div>
+            </div> *@
 
         </div>
 
@@ -61,7 +61,7 @@
 
                     <!-- Card header -->
                     <div class="card-header" role="tab" id="headingTwo2">
-                        <input type="checkbox" name="" class="side-checkbox">
+                        @* <input type="checkbox" name="" class="side-checkbox"> *@
                         <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#3"
                             aria-expanded="false" aria-controls="2">
                             <h5 class="mb-0 flow-child">
@@ -85,7 +85,11 @@
                         <div class="text-controls">
                             <h3 class="edit">Edit</h3>
                             <h3>Done</h3>
-                            <h3>Jane Doe</h3>
+                                 <h3 class="text-controls">
+                <label for="delete">delete</label>
+                <i class="fa fa-trash" ></i>
+            </h3>
+                        
                             <h3>02/07/2020</h3>
                         </div>
                     </form>
@@ -100,7 +104,7 @@
 
                     <!-- Card header -->
                     <div class="card-header" role="tab" id="headingTwo2">
-                        <input type="checkbox" name="" class="side-checkbox" checked="true">
+                        @* <input type="checkbox" name="" class="side-checkbox" checked="true"> *@
                         <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#2"
                             aria-expanded="false" aria-controls="2">
                             <h5 class="mb-0 flow-child">
@@ -122,8 +126,10 @@
                         <div class="text-controls">
                             <h3 class="edit">Edit</h3>
                             <h3>Done</h3>
-                            <h3>Jane Doe</h3>
-                            <h3>02/07/2020</h3>
+                                <h3 class="text-controls">
+                <label for="delete">delete</label>
+                <i class="fa fa-trash" ></i>
+            </h3>        <h3>02/07/2020</h3>
                         </div>
                     </form>
 
@@ -135,7 +141,7 @@
 
                     <!-- Card header -->
                     <div class="card-header" role="tab" id="headingTwo2">
-                        <input type="checkbox" name="" class="side-checkbox">
+                        @* <input type="checkbox" name="" class="side-checkbox"> *@
                         <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#1"
                             aria-expanded="false" aria-controls="2">
                             <h5 class="mb-0 flow-child">
@@ -160,7 +166,10 @@
                         <div class="text-controls">
                             <h3 class="edit">Edit</h3>
                             <h3>Done</h3>
-                            <h3>Jane Doe</h3>
+                                 <h3 class="text-controls">
+                <label for="delete">delete</label>
+                <i class="fa fa-trash" ></i>
+            </h3>
                             <h3>02/07/2020</h3>
                         </div>
                     </form>

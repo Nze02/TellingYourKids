@@ -1,6 +1,5 @@
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\bin\Debug\netcoreapp3.1\TellingYourKids.exe
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\bin\Debug\netcoreapp3.1\TellingYourKids.deps.json
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\bin\Debug\netcoreapp3.1\TellingYourKids.runtimeconfig.json
@@ -38,3 +37,6 @@ C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Ra
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\admin_dashboard_newentry.cshtml.g.cs
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\login.cshtml.g.cs
 C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\admin_signup.cshtml.g.cs
+C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\TellingYourKids.csproj.CoreCompileInputs.cache
+C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\TellingYourKids.genruntimeconfig.cache
+C:\Users\ENGR UCHE\Documents\projects\TellingYourKids\obj\Debug\netcoreapp3.1\Razor\Views\Home\about.cshtml.g.cs

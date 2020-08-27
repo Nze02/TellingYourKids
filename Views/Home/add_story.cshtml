@@ -1,7 +1,11 @@
 
     <link rel="stylesheet" href="~/css/add_message.css">
-   
-    <main class="container-fluid item">
+   <style>
+       #nav{
+           display: none !important;
+       }
+   </style>
+    <main class="container item" style="margin-top: 10px;">
         <form action="#" method="POST" class="form-group">
             <!-- typed.js -->
             <div class="typed_wrap container" style="height: 100px;">
@@ -23,28 +27,26 @@
   </div>
 </div>*@
 
-            <div class="d-flex container">
-                <label class="m-2 h2" for="story">Story</label>
+            <div class="d-flex container group flex-wrap">
+                <label class="h2" style="margin-top: 35px;" for="story">Story</label>
                 
-                <textarea class=" h3 m-2 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1">
-                   
-                </textarea>
-            </div>
+                <textarea class=" h3 m-2 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1"></textarea>
+                            </div>
 
             <br>
-            <div class="d-flex container">
-                <label class="m-2  h2 " for="name">Name
+            <div class="d-flex container flex-wrap">
+                <label class="h2" style="margin-top: 35px;"for="name">Name
                     <div class="h6">
                         (optional)
                     </div>
                 </label>
-                <input class="h2 m-2 border-right-0 border-top-0 border-left-0 form-control" id="name" type="text" class="text">
+                <input class="h2 m-2 border-right-0 border-top-0 border-left-0" id="name" type="text" class="text">
 
             </div>
             <br>
 
-            <div class="d-flex container">
-                <label class="m-2 h2" for="location">Location
+            <div class="d-flex container flex-wrap">
+                <label class="h2" style="margin-top: 35px;" for="location">Location
                     <div class="h6">(optional)</div>
                 </label>
                 <input class="h2 m-2 border-right-0 border-top-0 border-left-0 " id="location" type="text" class="text">
