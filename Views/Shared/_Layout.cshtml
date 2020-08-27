@@ -40,16 +40,45 @@
 
         <nav id="nav1" class="p-2">
             <div></div>
-            <a href="index.html">
+            <a asp-area="" asp-controller="Home" asp-action="index"> 
                 <h1 class="closebtn">&#10005</h1>
-            </a>
+            </a> 
         </nav>
    
   
-        <nav class="container" id="nav">
-            <a class="navbar-brand nav-icon" href="index.html">TellingOurKids</a>
-        </nav>
+        @* <nav class="container  py-4" id="nav" style="display:flex; flex-wrap:wrap">
+            <a class="navbar-brand nav-icon" href="/"><img src="images/twohalflogo2.png" alt="">    </a>
+               <h4 class="bold-pink mt-3 fontweight-bold ">What We Are Telling Our Kids About 2020 by Two Half Stories</h4> 
+        </nav> *@
       
+
+
+          <nav id="nav" class="container navbar navbar-expand-lg text-md-center">
+            <div class="d-flex ">
+                <a class="navbar-brand nav-ico " href="index.html"><img src="images/LogoTwoHalf.svg" style="height: 70px" alt="">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupprtedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                     <a style="color:#C72481; font-weight: bolder;" class="nav-link h5  abt" asp-area="" asp-controller="Home" asp-action="about">About </a>
+      
+                  </button>
+            </div>
+           
+            <h4 style="color:#C72481; font-weight:bolder " class="mr-5 h5 txt">What We Are Telling Our Kids About 2020 by Two Half Stories</h4>
+            
+
+
+
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right;">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a asp-area="" asp-controller="Home" asp-action="about" style="color:#C72481; font-weight: bolder; float:right" class="nav-link h5 ml-5" >About <span class="sr-only">(current)</span></a>
+                  </li>
+                 
+                </ul>
+               
+              </div>
+        </nav>
 
     </header>
  

@@ -159,4 +159,11 @@ button{
     .btn-add{
         width: 72vw;
     }
+    .txt{
+        font-weight: lighter;
+        font-size: small;
+    }
+    .abt{
+        margin-top:-30px;
+    }
 }

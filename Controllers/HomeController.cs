@@ -27,6 +27,12 @@ namespace TellingYourKids.Controllers
         {
             return View();
         }
+
+        
+        public IActionResult About()
+        {
+            return View();
+        }
          public IActionResult add_story()
         {
             return View();
