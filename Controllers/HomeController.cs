@@ -3,25 +3,43 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TellingYourKids.Contracts;
 using TellingYourKids.Models;
+using TellingYourKids.Models.PostDtos;
 
 namespace TellingYourKids.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IRepositoryManager _repository;
+        private readonly ILoggerManager _logger;
+        private readonly IMapper _mapper;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        //private readonly ILogger<HomeController> _logger;
+
+        public HomeController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
         {
+            _repository = repository;
             _logger = logger;
+            _mapper = mapper;
         }
 
-        public IActionResult Index()
+
+        //Runs and populates the index screen
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var posts = await _repository.Post.GetAllApprovedPostsAsync(trackChanges: false);
+            var postsDto = _mapper.Map<IEnumerable<PostOutputDto>>(posts);
+
+            return View(postsDto);
         }
+
+
 
         public IActionResult Privacy()
         {

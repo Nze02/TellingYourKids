@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<TellingYourKids.Models.PostDtos.PostOutputDto>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,123 +8,105 @@
     <h1 class="display-4">Welcome</h1>
     <p id="home">Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>-->
- <link rel="stylesheet" href="~/css/index.css">
- 
-    <main id="main" class="container mt-5">
-        <section class="siema">
+<link rel="stylesheet" href="~/css/index.css">
 
-            <!-- messages to be populated here -->
+<main id="main" class="container mt-5">
+
+    <section class="siema">
+
+        @foreach (var item in Model)
+        {
+            <!-- Display from DB -->
             <section class="message">
-                <h2 class="message-body h2 ">
-                    I use to make excuses to dip out of plans and stay home.
-                    Now I will do everything to see my friends and leave home.
+                <h2 class="message-body h2 " id="myPost">
+
+                    @Html.DisplayFor(modelItem => item.Story)
 
                 </h2>
                 <h4 class="pt-3 docs">
-                    <span class="Poster"> Abimbola Jason </span> |
-                    <span class="location">Lagos, NG </span> |
-                    <span class="duration">1 month ago</span>
+                    <span class="Poster"> @Html.DisplayFor(modelItem => item.Name) </span> |
+                    <span class="location">@Html.DisplayFor(modelItem => item.Location) </span> |
+                    <span class="duration">@Html.DisplayFor(modelItem => item.Date)</span>
                 </h4>
             </section>
+        }
 
-            <!-- end of message -->
+    </section>
+    <!-- end of message -->
 
-            <!-- dummy message populated here -->
-            <section class="message">
-                <h2 class="message-body h2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure excepturi nobis eos ducimus fugit
-                    recusandae non, voluptatum unde blanditiis odio.
-                </h2>
-                <h4 class="pt-3 docs">
-                    <span class="Poster"> Mark Mbeki </span> |
-                    <span class="location">Cape Town, SA </span> |
-                    <span class="duration">5 months ago</span>
-                </h4>
-            </section>
-            <!-- end of dummy message -->
+    <hr>
 
-
-            <!--second dummy message populated here -->
-            <section class="message">
-                <h2 class="message-body h2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, in eaque suscipit consequuntur
-                    reiciendis iusto sit velit odio id recusandae cumque facilis nisi quo, aspernatur obcaecati totam
-                    eos architecto eveniet.
-                </h2>
-                <h4 class="pt-3 docs">
-                    <span class="Poster"> Vladimir Bingo </span> |
-                    <span class="location">Turin, IT </span> |
-                    <span class="duration">3 month ago</span>
-                </h4>
-            </section>
-            <!-- end of second dummy message -->
-        </section>
-        <hr>
-        <section class="controls mt-5 mt-sm-1 ">
-            <div class="control-btn">
-                <button type="button" class="btn btn-dark m-1 prev"> Previous</button>
-                <button type="button" class="btn btn-dark m-1 next">Next </button>
-            </div>
-
-            <div class="add-details">
-                <button type="button" class="btn btn-link m-1" data-toggle="modal" data-target="#details">?</button>
-                <a asp-area="" asp-controller="Home" asp-action="add_story"><button type="button" class="btn btn-dark btn-add m-1" data-toggle="modal"
-                        data-target="#ad">Add</button></a>
-            </div>
-
-        </section>
-    </main>
-    <br>
-    <!-- footer -->
-    <!-- <footer class="footer">
-
-        &copy; TellingOurKids 2020.
-
-
-    </footer> -->
-    <!-- modal box for details -->
-    <section>
-
-        <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            <h4><i class="fa fa-hand-o-right"></i> swipe
-                                <i class="fa fa-arrow-left"></i>
-                                <i class="fa fa-hand-pointer-o"></i>
-                                <i class="fa fa-arrow-right"></i>
-                                or click <b>Previous</b> / <b>Next</b> buttons to view people's stories.
-                            </h4>
-                            <hr>
-                            <h4><i class="fa fa-hand-o-right"></i> Click the <b>Add</b> button to add your own story
-                            </h4>
-
-
-                        </h5>
-                    </div>
-
-                </div>
-            </div>
+    <section class="controls mt-5 mt-sm-1 ">
+        <div class="control-btn">
+            <button type="button" class="btn btn-dark m-1 prev"> Previous</button>
+            <button type="button" class="btn btn-dark m-1 next">Next </button>
         </div>
 
+        <div class="add-details">
+            <button type="button" class="btn btn-link m-1" data-toggle="modal" data-target="#details">?</button>
+            <a asp-area="" asp-controller="Home" asp-action="add_story">
+                <button type="button" class="btn btn-dark btn-add m-1" data-toggle="modal"
+                        data-target="#ad">
+                    Add
+                </button>
+            </a>
+        </div>
 
-
-         <!-- loader -->
-   <div class="se-pre-con"></div>
-        <!-- Ends --> 
     </section>
-  
-    <script src="~/lib/siama/siama.js" asp-append-version="true"></script>
-    <script src="~/js/siema.js" asp-append-version="true"></script>
-  
+</main>
+<br>
+<!-- footer -->
+<!-- <footer class="footer">
+
+    &copy; TellingOurKids 2020.
+
+
+</footer> -->
+<!-- modal box for details -->
+<section>
+
+    <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <h4>
+                            <i class="fa fa-hand-o-right"></i> swipe
+                            <i class="fa fa-arrow-left"></i>
+                            <i class="fa fa-hand-pointer-o"></i>
+                            <i class="fa fa-arrow-right"></i>
+                            or click <b>Previous</b> / <b>Next</b> buttons to view people's stories.
+                        </h4>
+                        <hr>
+                        <h4>
+                            <i class="fa fa-hand-o-right"></i> Click the <b>Add</b> button to add your own story
+                        </h4>
+
+
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- loader -->
+    <div class="se-pre-con"></div>
+    <!-- Ends -->
+</section>
+
+<script src="~/lib/siama/siama.js" asp-append-version="true"></script>
+<script src="~/js/siema.js" asp-append-version="true"></script>
+
 <script>
-     document.getElementById("nav1").style.display="none"
+    document.getElementById("nav1").style.display = "none"
 </script>
