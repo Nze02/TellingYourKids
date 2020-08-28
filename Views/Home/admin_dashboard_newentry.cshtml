@@ -1,206 +1,166 @@
+@model IEnumerable<TellingYourKids.Models.PostDtos.PostOutputDto>
 
-    
-    <link rel="stylesheet" href="~/css/admin_dashboard.css">
+<link rel="stylesheet" href="~/css/admin_dashboard.css">
 
-        <div class="sidenav" id="sidebar">
-            <a asp-area="" asp-controller="Home" asp-action="admin_dashboard">Storyline</a>
-            <a class="active" asp-area="" asp-controller="Home" asp-action="admin_dashboard_newentry">New Entry</a>
-            <a class="logout" asp-area="" asp-controller="Home" asp-action="login"> Logout</a>
-           
-          </div>
-        
+<div class="sidenav" id="sidebar">
+    <a asp-area="" asp-controller="Home" asp-action="admin_dashboard">Storyline</a>
+    <a class="active" asp-area="" asp-controller="Home" asp-action="admin_dashboard_newentry">New Entry</a>
+    <a class="logout" asp-area="" asp-controller="Home" asp-action="login"> Logout</a>
+
+</div>
+
 <main class="main">
     <header class="card" style="background-color: #fff; z-index: 9999; margin-top: 0;">
         <nav style="display: flex;">
-          <a asp-area="" asp-controller="Home" asp-action="index"> </a>  
+            <a asp-area="" asp-controller="Home" asp-action="index"> </a>
             <a href="" class="mt-2">
                 <i id="open" class="fa fa-bars"></i>
+
+            </a>
+            <a id="close"> <h2 style="font-weight: bolder;" class="mt-2">&#10005</h2></a>
+        </nav>
+        <hr>
+    </header>
+    <h2 id="msg" class="alert alert-success text-center" style=" display: none; width: 50%;">SAVED</h2>
+    <div id="props" class="container-fluid card" style="width: 80vw; z-index: 999; background-color: white; margin-top: 0px;">
+        @* <div>
+                <label for="selectall" >Select All</label>
+                <input type="checkbox" onclick="toggle(this)" name="" id="selectall">
+            </div> *@
+        <div onclick="moveup()">
+            <label for="moveup">Move up</label>
+            <i class="fa fa-angle-up" id="moveup"></i>
+        </div>
+        <div onclick="movedown()">
+            <label for="movedown">Move down</label>
+            <i class="fa fa-angle-down" id="movedown"></i>
+        </div>
+        @* <div>
+                <label for="approve">Approve</label>
+                <img src="/images/approved.svg" id="approve" alt="">
+            </div>  *@
+
+
+        @* <div>
+                <label for="delete">delete</label>
+                <i class="fa fa-trash" id="delete"></i>
+            </div> *@
+
+    </div>
+
+    <section id="move" style="overflow: auto; white-space: nowrap;">
+        <!--Accordion wrapper-->
+        <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+            @foreach (var item in Model)
+            {
+                <!-- Accordion card -->
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingTwo2">
+                        @* <input type="checkbox" name="" class="side-checkbox">  *@
+                        <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#@item.Id"
+                           aria-expanded="false" aria-controls="2">
+                            <h5 class="mb-0 flow-child">
+
+                                @item.Story -
+                                <span>@Html.DisplayFor(modelItem => item.Name)</span>
+                                <span class="date">@Html.DisplayFor(modelItem => item.Date)</span>
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <form id="@item.Id" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+                        <textarea class="card-body" readonly>
+          @Html.DisplayFor(modelItem => item.Story)
+       
+        </textarea>
+                        <hr>
+                        <div class="text-controls">
+                            <h3 class="edit">Edit</h3>
+                            <h3>Done</h3>
+                            <h3>Approve</h3>
+                            <h3 class="text-controls">
+                                <label for="delete">delete</label>
+                                <i class="fa fa-trash"></i>
+                            </h3>
+                        </div>
+                    </form>
+
+                </div>
+            }
+
                 
-            </a> 
-            <a id="close" > <h2 style="font-weight: bolder;" class="mt-2">&#10005</h2></a>        
-          </nav>
-<hr> 
-        </header>
-        <h2 id="msg" class="alert alert-success text-center" style=" display: none; width: 50%;">SAVED</h2>
-<div id="props" class="container-fluid card" style="width: 80vw; z-index: 999; background-color: white; margin-top: 0px;">
-    @* <div>
-        <label for="selectall" >Select All</label>
-        <input type="checkbox" onclick="toggle(this)" name="" id="selectall">
-    </div> *@
-    <div onclick="moveup()">
-        <label for="moveup">Move up</label>
-        <i class="fa fa-angle-up" id="moveup"></i>
-    </div>
-    <div onclick="movedown()">
-        <label for="movedown">Move down</label>
-        <i class="fa fa-angle-down" id="movedown"></i>
-    </div>
-    @* <div>
-        <label for="approve">Approve</label>
-        <img src="/images/approved.svg" id="approve" alt="">
-    </div>  *@
-   
+                <!-- Accordion card -->
+                <div class="card">
 
-    @* <div>
-        <label for="delete">delete</label>
-        <i class="fa fa-trash" id="delete"></i>
-    </div> *@
-   
-</div>
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingTwo2">
+                        @* <input type="checkbox" name="" class="side-checkbox">  *@
+                        <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#1"
+                           aria-expanded="false" aria-controls="2">
+                            <h5 class="mb-0 flow-child">
 
-<section id="move" style="overflow: auto; white-space: nowrap;">
-    <!--Accordion wrapper-->
-<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                                Lorem ipsum dolor sit amet.-
+                                <span>Jane Doe</span>
+                                <span class="date">02/07/2020</span>
+                                <i class="fa fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
 
-   <!-- Accordion card -->
-   <div class="card">
+                    <!-- Card body -->
+                    <form id="1" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
 
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2" >
-        @* <input type="checkbox" name="" class="side-checkbox">  *@
-      <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#3"
-        aria-expanded="false" aria-controls="2">
-        <h5 class="mb-0 flow-child" >
-            
-          Lorem ipsum dolor sit amet.- 
-          <span>Jane Doe</span> 
-           <span class="date">02/07/2020</span>
-           <i class="fa fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <form id="3" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-        <textarea class="card-body" readonly>
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-       
-        </textarea>
-        <hr>
-        <div class="text-controls">
-             <h3 class="edit">Edit</h3>
-            <h3>Done</h3>
-             <h3>Approve</h3>
-                        <h3 class="text-controls">
-                <label for="delete">delete</label>
-                <i class="fa fa-trash" ></i>
-            </h3>
-        </div>
-      </form>
-
-  </div>
-  <!-- Accordion card -->
-
-
-  
-  <!-- Accordion card -->
-  <div class="card">
-
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2" >
-        @* <input type="checkbox" name="" class="side-checkbox" checked="true">  *@
-      <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#2"
-        aria-expanded="false" aria-controls="2">
-        <h5 class="mb-0 flow-child" >
-            
-          Lorem ipsum dolor sit amet.- 
-          <span>Jane Doe</span> 
-           <span class="date">02/07/2020</span>
-           <i class="fa fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <form id="2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-        <textarea class="card-body" readonly>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        </textarea>
-        <hr>
-        <div class="text-controls">
-            <h3 class="edit">Edit</h3>
-            <h3>Done</h3>
-             <h3>Approve</h3>
-                        <h3 class="text-controls">
-                <label for="delete">delete</label>
-                <i class="fa fa-trash" ></i>
-            </h3>
-           
-       
-        </div>
-      </form>
-
-  </div>
-  <!-- Accordion card -->
- 
-  <!-- Accordion card -->
-  <div class="card">
-
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2" >
-        @* <input type="checkbox" name="" class="side-checkbox">  *@
-      <a class="collapsed flow" data-toggle="collapse" data-parent="#accordionEx" href="#1"
-        aria-expanded="false" aria-controls="2">
-        <h5 class="mb-0 flow-child" >
-            
-          Lorem ipsum dolor sit amet.- 
-          <span>Jane Doe</span> 
-           <span class="date">02/07/2020</span>
-           <i class="fa fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <form id="1" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
-      
-        <textarea class="card-body" readonly>
+                        <textarea class="card-body" readonly>
         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
      
       </textarea>
-      <hr>
-      <div class="text-controls">
-           <h3 class="edit">Edit</h3>
-            <h3>Done</h3>
-             <h3>Approve</h3>
-                        <h3 class="text-controls">
-                <label for="delete">delete</label>
-                <i class="fa fa-trash" ></i>
-            </h3>
-      </div>
-    </form>
+                        <hr>
+                        <div class="text-controls">
+                            <h3 class="edit">Edit</h3>
+                            <h3>Done</h3>
+                            <h3>Approve</h3>
+                            <h3 class="text-controls">
+                                <label for="delete">delete</label>
+                                <i class="fa fa-trash"></i>
+                            </h3>
+                        </div>
+                    </form>
 
-  </div>
-  <!-- Accordion card -->
-</div>
-<!-- Accordion wrapper -->
-</section>
+                </div>
+                <!-- Accordion card -->
+            </div>
+        <!-- Accordion wrapper -->
+    </section>
 
 
 
 
 
 </main>
-       
-         <!-- footer -->
-         <!-- <footer class="footer">
 
-            &copy; TellingOurKids 2020.
-  
-  
-          </footer> -->
+<!-- footer -->
+<!-- <footer class="footer">
 
-          
-        <!-- loader -->
-        <div class="se-pre-con"></div>
-        <!-- Ends -->
+   &copy; TellingOurKids 2020.
 
-    <script src="~/lib/bootstrap/dist/js/slim.min.js"></script>
+
+ </footer> -->
+<!-- loader -->
+<div class="se-pre-con"></div>
+<!-- Ends -->
+
+<script src="~/lib/bootstrap/dist/js/slim.min.js"></script>
 <script src="~/js/bootstrap.min.js" asp-append-version="true"></script>
 <!-- sideNav -->
 <script src="~/js/sidenav.js" asp-append-version="true"></script>
 <!----controls--->
 <script src="~/js/controls.js" asp-append-version="true"></script>
 <script>
-    document.getElementById("nav1").style.display="none"
-     document.getElementById("nav").style.display="none"
+    document.getElementById("nav1").style.display = "none"
+    document.getElementById("nav").style.display = "none"
 </script>

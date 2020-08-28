@@ -41,6 +41,64 @@ namespace TellingYourKids.Controllers
 
 
 
+
+
+        [HttpGet("{id}", Name = "PostById")]
+        public async Task<IActionResult> GetById(int id)
+        {
+
+            var post = await _repository.Post.GetPostAsync(id, trackChanges: false);
+            if (post == null)
+            {
+                _logger.LogInfo($"Post with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+            else
+            {
+                var postDto = _mapper.Map<PostOutputDto>(post);
+                return Ok(postDto);
+            }
+
+        }
+
+        [HttpGet]
+        public IActionResult add_story()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> add_story([FromBody] PostInputDto post)
+        {
+            if (post == null)
+                return BadRequest();
+
+            var postEntity = _mapper.Map<Post>(post);
+            _repository.Post.CreatePost(postEntity);
+            await _repository.SaveAsync();
+
+            return View();
+        }
+
+
+
+        public async Task<IActionResult> admin_dashboard()
+        {
+            var posts = await _repository.Post.GetAllApprovedPostsAsync(trackChanges: false);
+            var postsDto = _mapper.Map<IEnumerable<PostOutputDto>>(posts);
+
+            return View(postsDto);
+        }
+
+        public async Task<IActionResult> admin_dashboard_newentry()
+        {
+            var posts = await _repository.Post.GetAllUnApprovedPostsAsync(trackChanges: false);
+            var postsDto = _mapper.Map<IEnumerable<PostOutputDto>>(posts);
+
+            return View(postsDto);
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
@@ -51,23 +109,13 @@ namespace TellingYourKids.Controllers
         {
             return View();
         }
-         public IActionResult add_story()
-        {
-            return View();
-        }
-            public IActionResult admin_dashboard()
-        {
-            return View();
-        }
+        
            public IActionResult login()
         {
             return View();
         }
-             public IActionResult admin_dashboard_newentry()
-        {
-            return View();
-        }
-    public IActionResult admin_signup()
+
+        public IActionResult admin_signup()
         {
             return View();
         }

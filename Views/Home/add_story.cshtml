@@ -1,93 +1,94 @@
+@model TellingYourKids.Models.PostDtos.PostInputDto
 
-    <link rel="stylesheet" href="~/css/add_message.css">
-   <style>
-       #nav{
-           display: none !important;
-       }
-   </style>
-    <main class="container item" style="margin-top: 10px;">
-        <form action="#" method="POST" class="form-group">
-            <!-- typed.js -->
-            <div class="typed_wrap container" style="height: 100px;">
-                <h2><span class="typed"></span></h2>
-            </div>
-
-
-@*  <div class="container">
-  <div class="row">
-    <div class="col-sm">
-       <label class=" h2" for="story">Story</label>
-    </div>
-    <div class="col-sm">
-        <textarea class=" h3 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1">
-                   
-                </textarea>
-    </div>
-    
-  </div>
-</div>*@
-
-            <div class="d-flex container group flex-wrap">
-                <label class="h2" style="margin-top: 35px;" for="story">Story</label>
-                
-                <textarea class=" h3 m-2 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1"></textarea>
-                            </div>
-
-            <br>
-            <div class="d-flex container flex-wrap">
-                <label class="h2" style="margin-top: 35px;"for="name">Name
-                    <div class="h6">
-                        (optional)
-                    </div>
-                </label>
-                <input class="h2 m-2 border-right-0 border-top-0 border-left-0" id="name" type="text" class="text">
-
-            </div>
-            <br>
-
-            <div class="d-flex container flex-wrap">
-                <label class="h2" style="margin-top: 35px;" for="location">Location
-                    <div class="h6">(optional)</div>
-                </label>
-                <input class="h2 m-2 border-right-0 border-top-0 border-left-0 " id="location" type="text" class="text">
-
-            </div>
-            <br>
-            <br>
-<div class="container">
-    <button type="submit" class="btn btn-dark btn-add m-1">submit</button>
-</div>
-            
+<link rel="stylesheet" href="~/css/add_message.css">
+<style>
+    #nav {
+        display: none !important;
+    }
+</style>
+<main class="container item" style="margin-top: 10px;">
+    <form action="add_story" method="POST" class="form-group">
+        <!-- typed.js -->
+        <div class="typed_wrap container" style="height: 100px;">
+            <h2><span class="typed"></span></h2>
+        </div>
 
 
-        </form>
+        @*  <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                   <label class=" h2" for="story">Story</label>
+                </div>
+                <div class="col-sm">
+                    <textarea class=" h3 border-right-0 border-top-0 border-left-0" id="story" type="text" required  tabindex="1">
+
+                            </textarea>
+                </div>
+
+              </div>
+            </div>*@
+
+        <div class="d-flex container group flex-wrap">
+            <label class="h2" style="margin-top: 35px;" for="story">Story</label>
+
+            <textarea asp-for="Story" class=" h3 m-2 border-right-0 border-top-0 border-left-0" id="story" type="text" required tabindex="1"></textarea>
+        </div>
+
+        <br>
+        <div class="d-flex container flex-wrap">
+            <label class="h2" style="margin-top: 35px;" for="name">
+                Name
+                <div class="h6">
+                    (optional)
+                </div>
+            </label>
+            <input asp-for="Name" class="h2 m-2 border-right-0 border-top-0 border-left-0" id="name" type="text" class="text">
+
+        </div>
+        <br>
+
+        <div class="d-flex container flex-wrap">
+            <label class="h2" style="margin-top: 35px;" for="location">
+                Location
+                <div class="h6">(optional)</div>
+            </label>
+            <input asp-for="Location" class="h2 m-2 border-right-0 border-top-0 border-left-0 " id="location" type="text" class="text">
+
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <button type="submit" class="btn btn-dark btn-add m-1">submit</button>
+        </div>
 
 
 
-    </main>
+    </form>
 
 
-    <!-- footer -->
-    <!-- <footer class="footer">
 
-        &copy; TellingOurKids 2020.
+</main>
 
 
-    </footer> -->
-    <!-- loader -->
-    <div class="se-pre-con"></div>
-    <!-- Ends -->
- 
+<!-- footer -->
+<!-- <footer class="footer">
 
-    <!-- typed js -->
-    <script src="~/js/typedjsjquery.js" asp-append-version="true"></script>
-    <script src="~/js/typed.min.js" asp-append-version="true"></script>
-    <script src="~/js/typed.js" asp-append-version="true"></script>
-    <script>
-        window.addEventListener('load', (()=>{
-            document.getElementById('story').focus()
-        }))
-        document.getElementById("nav").style.display="none"
-         document.getElementById("footer").style.display="none"
-        
-    </script>
+    &copy; TellingOurKids 2020.
+
+
+</footer> -->
+<!-- loader -->
+<div class="se-pre-con"></div>
+<!-- Ends -->
+<!-- typed js -->
+<script src="~/js/typedjsjquery.js" asp-append-version="true"></script>
+<script src="~/js/typed.min.js" asp-append-version="true"></script>
+<script src="~/js/typed.js" asp-append-version="true"></script>
+<script>
+    window.addEventListener('load', (() => {
+        document.getElementById('story').focus()
+    }))
+    document.getElementById("nav").style.display = "none"
+    document.getElementById("footer").style.display = "none"
+
+</script>
